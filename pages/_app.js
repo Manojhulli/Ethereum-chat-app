@@ -1,16 +1,15 @@
-import '../styles/globals.css'
+import "../styles/globals.css";
 
-import { ChatAppProvider } from '../context/ChatAppContext';
-import {NavBar} from '../components/index';
-
+//INTERNAL IMPORT
+import { ChatAppProvider } from "../Context/ethechatContext";
+import { NavBar } from "../Components/index";
 
 const MyApp = ({ Component, pageProps }) => (
   <div>
     <ChatAppProvider>
-      <NavBar/>
+      <NavBar />
       <Component {...pageProps} />
     </ChatAppProvider>
-    
   </div>
 );
 

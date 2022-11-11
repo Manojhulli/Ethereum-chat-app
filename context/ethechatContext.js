@@ -6,12 +6,11 @@ import {
   ChechIfWalletConnected,
   connectWallet,
   connectingWithContract,
-} from "../Utils/apiFeature";
+} from "../utils/apiFeature";
 
 export const ChatAppContect = React.createContext();
 
 export const ChatAppProvider = ({ children }) => {
-  
   //USESTATE
   const [account, setAccount] = useState("");
   const [userName, setUserName] = useState("");
@@ -121,27 +120,25 @@ export const ChatAppProvider = ({ children }) => {
     setCurrentUserName(userName);
     setCurrentUserAddress(userAddress);
   };
-  const title = "hello world";
   return (
     <ChatAppContect.Provider
       value={{
-        title
-        // readMessage,
-        // createAccount,
-        // addFriends,
-        // sendMessage,
-        // readUser,
-        // connectWallet,
-        // ChechIfWalletConnected,
-        // account,
-        // userName,
-        // friendLists,
-        // friendMsg,
-        // userLists,
-        // loading,
-        // error,
-        // currentUserName,
-        // currentUserAddress,
+        readMessage,
+        createAccount,
+        addFriends,
+        sendMessage,
+        readUser,
+        connectWallet,
+        ChechIfWalletConnected,
+        account,
+        userName,
+        friendLists,
+        friendMsg,
+        userLists,
+        loading,
+        error,
+        currentUserName,
+        currentUserAddress,
       }}
     >
       {children}
